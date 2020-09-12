@@ -1,7 +1,7 @@
 package com.xxm.hazelcastedemo.controller;
 
-import com.example.demo2.service.MusicService;
 import com.hazelcast.core.HazelcastInstance;
+import com.xxm.hazelcastedemo.service.MusicService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +24,7 @@ public class HazelcastController {
     @Autowired
     private HazelcastInstance hazelcastInstance;
 
+    //参考 https://blog.csdn.net/zhongzunfa/article/details/80551753
     @RequestMapping("/hezelcast")
     @ResponseBody
     public void getHazelcast() {
@@ -51,7 +52,7 @@ public class HazelcastController {
         musicService.play(instrument);
     }
 
-
+    //参考   https://www.cnblogs.com/cxyxiaobao/p/12394360.html
     @PostMapping(value = "/write-data")
     public String writeDataToHazelcast(@RequestParam String key, @RequestParam String value) {
         Map<String, String> hazelcastMap = hazelcastInstance.getMap("my-map");

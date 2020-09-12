@@ -23,7 +23,7 @@ public class Swagger2Config {
 	@Bean
 	public Docket webApiConfig(){
 		return new Docket(DocumentationType.SWAGGER_2)
-				.groupName("KuangStudy-Api")
+				.groupName("hazelcastdemo-Api")
 				.apiInfo(webApiInfo())
 				.enable(enable) // 是否显示
 				.select()
@@ -33,10 +33,9 @@ public class Swagger2Config {
 
 	private ApiInfo webApiInfo(){
 		return new ApiInfoBuilder()
-				.title("vuedemo-Api")
-				.description("vuedemo-Api")
+				.title("hazelcastdemo-Api")
+				.description("hazelcastdemo-Api")
 				.version("1.0")
-				.contact(new Contact("KuangShen", "http://kuangstudy.com", "24736743@qq.com"))
 				.build();
 	}
 

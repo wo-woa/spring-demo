@@ -1,0 +1,14 @@
+#https:#www.toyaml.com/index.html
+server:
+    port: 8000
+
+swagger:
+  enable: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/vuedemo?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+

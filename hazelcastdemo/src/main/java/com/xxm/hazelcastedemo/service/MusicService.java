@@ -22,7 +22,7 @@ public class MusicService {
     public void clearCache(){}
 
     // 表示的是属性为 trombone 就进行缓存
-    @Cacheable()
+    @Cacheable(condition = "#instrument.equals('trombone')")
     public String play(String instrument){
 
         log.info("Executing: " + this.getClass().getSimpleName() + ".play(\"" + instrument + "\");");

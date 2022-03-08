@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>8</java.version>
-        <hazelcast.vertsion>3.12.9</hazelcast.vertsion>
+        <hazelcast.vertsion>5.1</hazelcast.vertsion>
     </properties>
 
     <dependencies>
